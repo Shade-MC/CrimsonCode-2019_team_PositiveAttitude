@@ -1,2 +1,7 @@
 # CrimsonCode-2019_team_PositiveAttitude
 We made a text based adventure game for 2019 Crimson Code Hackathon
+
+The program mostly conist of a scalable engine for text based adventures. The scaling is handeled by node objects which are conected with a combination of linked lists and trees. The nodes are created based on the information int nodes.csv
+
+The nodes.csv is used to build the entire branching narative. the first column is an id number for each node. The second column indicates weather a node is a text, decision, or combat node coresponding to a 1,2,3 respectively. The third column is used to build the objects in each category with the paramiter changing based on the object type. For a text node simply put the string you what to be displayed when the node is reached. For a decision node write each of the choices seperated by a semi-colin and ensure that there are 4 semi-colins in total even if the region between is blank. Finaly for combat nodes simply put the number of the enemy as seen in the switch statent in the Combat objects constructor. The remaining colums corespond to the choice number, which is the Id of the node each choice will lead to. That can be at most 4 different choices with the finaly collumn being for an unimplimented feature. 
+Node there must not be a new-line '\n' at the end of the csv. When modifing with excel a final new-line is added and must be removed before runing the program
